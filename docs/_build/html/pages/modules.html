@@ -1,0 +1,218 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Modules &#8212; human CSS 0.1.0 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Other topics" href="extending.html" />
+    <link rel="prev" title="Flexbox" href="flexbox.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="modules">
+<span id="modules"></span><h1>Modules<a class="headerlink" href="#modules" title="Permalink to this headline">¶</a></h1>
+<p>This documentation groups the micro-attributes into modules.</p>
+<div class="section" id="text">
+<span id="text"></span><h2>Text<a class="headerlink" href="#text" title="Permalink to this headline">¶</a></h2>
+<p>The text micro-attribute grouping provides control over text color, fonts, alignment, and so on.
+It is introduced by the micro-attribute <code class="docutils literal notranslate"><span class="pre">text</span></code>.
+<code class="docutils literal notranslate"><span class="pre">text</span></code> is combined with micro-attributes for color,
+font size using standard synonyms such as <code class="docutils literal notranslate"><span class="pre">large</span></code> (or any length),
+font weight using standard synonyms such as <code class="docutils literal notranslate"><span class="pre">bold</span></code>, and others.</p>
+<p>Other text features include <code class="docutils literal notranslate"><span class="pre">italic</span></code>, <code class="docutils literal notranslate"><span class="pre">underline</span></code>, <code class="docutils literal notranslate"><span class="pre">upper</span></code>, <code class="docutils literal notranslate"><span class="pre">lower</span></code>, <code class="docutils literal notranslate"><span class="pre">capitalize</span></code>, <code class="docutils literal notranslate"><span class="pre">small-caps</span></code>, and so on.</p>
+</div>
+<div class="section" id="borders-margins-outlines-and-padding">
+<span id="borders-margins-outlines-and-padding"></span><h2>Borders, margins, outlines, and padding<a class="headerlink" href="#borders-margins-outlines-and-padding" title="Permalink to this headline">¶</a></h2>
+<p>Borders, margins, outlines, and padding are introduced by the <code class="docutils literal notranslate"><span class="pre">border</span></code>, <code class="docutils literal notranslate"><span class="pre">margin</span></code>, <code class="docutils literal notranslate"><span class="pre">outline</span></code>, and <code class="docutils literal notranslate"><span class="pre">padding</span></code> micro-attributes.
+The attributes <code class="docutils literal notranslate"><span class="pre">top</span></code>, <code class="docutils literal notranslate"><span class="pre">left</span></code>, <code class="docutils literal notranslate"><span class="pre">bottom</span></code>, and <code class="docutils literal notranslate"><span class="pre">right</span></code> may be given to indicate which side or sides are to be affected.
+A number or length, or keyword such as <code class="docutils literal notranslate"><span class="pre">thick</span></code> or <code class="docutils literal notranslate"><span class="pre">thin</span></code>,  specifies the size of the border, margin, outline, or padding.
+For borders and outlines, the standard types such as <code class="docutils literal notranslate"><span class="pre">solid</span></code> and <code class="docutils literal notranslate"><span class="pre">dotted</span></code> are available as micro-attributes.
+Colors may also be specified for borders and padding.</p>
+</div>
+<div class="section" id="background">
+<span id="background"></span><h2>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">background</span></code> micro-atteribute provides a background of the specified color.</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">beige</span> <span class="na">background</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="sizes">
+<span id="sizes"></span><h2>Sizes<a class="headerlink" href="#sizes" title="Permalink to this headline">¶</a></h2>
+<p>Box sizes are indicated with micro-attributes such as <code class="docutils literal notranslate"><span class="pre">width</span></code> and <code class="docutils literal notranslate"><span class="pre">height</span></code>,
+which are given together with other micro-attributes indicating the size,
+as a length, percentage, or keyword such as <code class="docutils literal notranslate"><span class="pre">half</span></code>.</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>&lt;div half width&gt;&lt;/div&gt;
+&lt;div 40% height&gt;&lt;/div&gt;
+&lt;div max-height 50 vh&gt;&lt;/div&gt;
+</pre></div>
+</div>
+</div>
+<div class="section" id="spacing">
+<span id="spacing"></span><h2>Spacing<a class="headerlink" href="#spacing" title="Permalink to this headline">¶</a></h2>
+<p>People commonly use top margins and bottom margins and top padding and bottom padding and special spacing elements
+to space out their elements.
+Human CSS classes provide a simple mechanisms for controlling spacing.
+The <code class="docutils literal notranslate"><span class="pre">spaced</span></code> micro-attribute adds space between child elements.
+Variants of these (indicated by modifier micro-attributes) provide more or less spacing.</p>
+<p>Example of spaced children:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">spaced</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="display-and-visibility">
+<span id="display-and-visibility"></span><h2>Display and visibility<a class="headerlink" href="#display-and-visibility" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">show</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">inline</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">hide</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">visible</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">invisible</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="opacity">
+<span id="opacity"></span><h2>Opacity<a class="headerlink" href="#opacity" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>&lt;div opaque&gt;&lt;/div&gt;
+&lt;div semi-opaque&gt;&lt;/div&gt;
+&lt;div transparent&gt;&lt;/div&gt;
+&lt;div opacity 0.8&gt;&lt;/div&gt;
+</pre></div>
+</div>
+</div>
+<div class="section" id="z-index">
+<span id="z-index"></span><h2>Z-index<a class="headerlink" href="#z-index" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">back</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">front</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">backmost</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">frontmost</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="position">
+<span id="position"></span><h2>Position<a class="headerlink" href="#position" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">absolute</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">relative</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">fixed</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="transitions">
+<span id="transitions"></span><h2>Transitions<a class="headerlink" href="#transitions" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">transition</span> <span class="na">fast</span> <span class="na">linear</span> <span class="na">delay</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">human CSS</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting-started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="motivation.html">Motivation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="colors.html">Colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="units.html">Units and measures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flexbox.html">Flexbox</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Modules</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#text">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#borders-margins-outlines-and-padding">Borders, margins, outlines, and padding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#background">Background</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sizes">Sizes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#spacing">Spacing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#display-and-visibility">Display and visibility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#opacity">Opacity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#z-index">Z-index</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#position">Position</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#transitions">Transitions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="extending.html">Other topics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="design-notes.html">Design notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference.html">Reference</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="flexbox.html" title="previous chapter">Flexbox</a></li>
+      <li>Next: <a href="extending.html" title="next chapter">Other topics</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, Bob Myers.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.11</a>
+      
+      |
+      <a href="../_sources/pages/modules.md.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,146 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Design notes &#8212; human CSS 0.1.0 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Reference" href="reference.html" />
+    <link rel="prev" title="Other topics" href="extending.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="design-notes">
+<span id="design-notes"></span><h1>Design notes<a class="headerlink" href="#design-notes" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="performance">
+<span id="performance"></span><h2>Performance<a class="headerlink" href="#performance" title="Permalink to this headline">¶</a></h2>
+<p>CSS is rarely the major bottleneck in application performance.
+Of course there may be exceptions involving huge systems,
+or poorly written CSS rules,
+or use of CSS propeirtes with known performance implications.</p>
+<p>Human CSS classes offer improved performance because the dozens or hundreds of CSS files often seen in
+poorly-engineered applications are much smaller (or not needed at all).
+This reduces both download and processing time.</p>
+</div>
+<div class="section" id="unused-unsupported-features">
+<span id="unused-unsupported-features"></span><h2>Unused/unsupported features<a class="headerlink" href="#unused-unsupported-features" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="floats">
+<span id="floats"></span><h3>Floats<a class="headerlink" href="#floats" title="Permalink to this headline">¶</a></h3>
+<p>We do not use or support floats, and neither should you.</p>
+</div>
+<div class="section" id="important">
+<span id="important"></span><h3><code class="docutils literal notranslate"><span class="pre">!important</span></code><a class="headerlink" href="#important" title="Permalink to this headline">¶</a></h3>
+<p>We neither need nor use <code class="docutils literal notranslate"><span class="pre">!important</span></code>, and we recommend you do not either.</p>
+</div>
+<div class="section" id="inline-styles">
+<span id="inline-styles"></span><h3>Inline styles<a class="headerlink" href="#inline-styles" title="Permalink to this headline">¶</a></h3>
+<p>Some element-specific styling can obviously not be handled with micro-attributes,
+<code class="docutils literal notranslate"><span class="pre">background-image</span></code> for example.
+If a page has only one or two such cases, we suggest inlining the rule with the <code class="docutils literal notranslate"><span class="pre">style</span></code> attribute.
+We are not religious zealots, and this can be a better approach than creating a separate CSS file
+and defining an additional class merely in order to target the element.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">human CSS</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting-started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="motivation.html">Motivation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="colors.html">Colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="units.html">Units and measures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flexbox.html">Flexbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="extending.html">Other topics</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Design notes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#performance">Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#unused-unsupported-features">Unused/unsupported features</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="reference.html">Reference</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="extending.html" title="previous chapter">Other topics</a></li>
+      <li>Next: <a href="reference.html" title="next chapter">Reference</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, Bob Myers.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.11</a>
+      
+      |
+      <a href="../_sources/pages/design-notes.md.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

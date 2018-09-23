@@ -1,0 +1,12 @@
+{
+  "name": "@rtm/human-css",
+  "version": "0.1.0",
+  "description": "Human-friendly CSS attributes",
+  "main": "index.css",
+  "repository": "github:rtm/human-css",
+  "keywords": [
+    "css"
+  ],
+  "author": "rtm@gol.com",
+  "license": "MIT"
+}

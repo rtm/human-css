@@ -1,0 +1,143 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Design Principles, Concepts and Features &#8212; human CSS 0.1.0 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="design-principles-concepts-and-features">
+<span id="design-principles-concepts-and-features"></span><h1>Design Principles, Concepts and Features<a class="headerlink" href="#design-principles-concepts-and-features" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="micro-attributes">
+<span id="micro-attributes"></span><h2>Micro-attributes<a class="headerlink" href="#micro-attributes" title="Permalink to this headline">¶</a></h2>
+<p>Human CSS is a collection of micro-attributes: HTML attributes with very particular meaning.
+These attributes are assigned to HTML elements,
+which in this approach may have two or five or even ten attributes.
+<strong>We are moving the styling logic back into the HTML!</strong>
+The styling in the HTML becomes semnatic and readable.
+Instead of having a class “book-list-entry” which contains 20 properties over in some distant CSS file,
+we add three or four attributes to HTML which clearly express the styling of the entry.
+In the best case, which is readily realizable in practice, no element-specific class is necessary at all.</p>
+</div>
+<div class="section" id="combining-micro-attributes">
+<span id="combining-micro-attributes"></span><h2>Combining micro-attributes<a class="headerlink" href="#combining-micro-attributes" title="Permalink to this headline">¶</a></h2>
+<p>Human CSS uses a relatively limited number of general-purpose micro-attributes.
+So <code class="docutils literal notranslate"><span class="pre">green</span></code> means green for text, or borders, or backgrounds.
+But what if I want to specify both text color <strong>and</strong> border color on an element?
+How do I know which color is which?
+Other micro-class frameworks solve this by a proliferation of classes such as <code class="docutils literal notranslate"><span class="pre">green-border</span></code>, and <code class="docutils literal notranslate"><span class="pre">green-text</span></code>.
+We take a different approach, which is to place the attributes on individual, nested HTML elements:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">one</span> <span class="na">em</span> <span class="na">margin</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">thick</span> <span class="na">dark</span> <span class="na">blue</span> <span class="na">border</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">x-light</span> <span class="na">pink</span> <span class="na">background</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">five</span> <span class="na">percent</span> <span class="na">padding</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">large</span> <span class="na">bold</span> <span class="na">white</span> <span class="na">text</span><span class="p">&gt;</span>
+          Bob
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>Although this does result in more deeply nested HTML,
+it also has major advantages.
+Each element has a single, well-defined purpose,
+and as mentioned above we need only generic attributes such as <code class="docutils literal notranslate"><span class="pre">blue</span></code> which work everywhere.</p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">human CSS</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting-started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="background.html">Background and Motivation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="colors.html">Colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="units.html">Units and measures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flexbox.html">flexbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="going-deeper.html">Design Principles, Concepts and Features</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, Bob Myers.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.11</a>
+      
+      |
+      <a href="../_sources/pages/principles.md.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

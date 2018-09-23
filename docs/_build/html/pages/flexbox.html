@@ -1,0 +1,136 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Flexbox &#8212; human CSS 0.1.0 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Modules" href="modules.html" />
+    <link rel="prev" title="Units and measures" href="units.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="flexbox">
+<span id="flexbox"></span><h1>Flexbox<a class="headerlink" href="#flexbox" title="Permalink to this headline">¶</a></h1>
+<p>Human CSS expects most layout to be done using flexbox,
+and provides a solid set of micro-attributes to control them.
+The micro-attributes available include ones to control direction, wrapping, and alignment.
+You’ll no longer need to struggle with trying to remember the names or meanings or values of
+properties like <code class="docutils literal notranslate"><span class="pre">align-items</span></code>.</p>
+<p>Examples of flexbox:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">flex</span> <span class="na">wrap</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">basis</span> <span class="na">one-third</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">basis</span> <span class="na">one-third</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">basis</span> <span class="na">one-third</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">flex</span> <span class="na">vertical</span> <span class="na">justify</span> <span class="na">align-center</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>Flexbox is specified using the <code class="docutils literal notranslate"><span class="pre">flex</span></code> micro-attribute.
+The direction is specified by <code class="docutils literal notranslate"><span class="pre">horizontal</span></code> or <code class="docutils literal notranslate"><span class="pre">vertical</span></code>.
+Other aspects of the flexbox may be controlled by the micro-attributes <code class="docutils literal notranslate"><span class="pre">wrap</span></code>, <code class="docutils literal notranslate"><span class="pre">reverse</span></code>, and <code class="docutils literal notranslate"><span class="pre">inline</span></code>.</p>
+<p>Justification along the main axis is specified by <code class="docutils literal notranslate"><span class="pre">justify</span></code> and <code class="docutils literal notranslate"><span class="pre">justify-gap</span></code> micro-attrihutes.
+Alignment of items is controlled by <code class="docutils literal notranslate"><span class="pre">align-top</span></code>, <code class="docutils literal notranslate"><span class="pre">align-middle</span></code>, <code class="docutils literal notranslate"><span class="pre">aslign-bottom</span></code>, <code class="docutils literal notranslate"><span class="pre">align-left</span></code>, <code class="docutils literal notranslate"><span class="pre">align-center</span></code>, <code class="docutils literal notranslate"><span class="pre">align-right</span></code> micro-attributes,
+which are always interpreted in the correct way depending on the flexbox direction.</p>
+<p>Individual items can be controlled by the <code class="docutils literal notranslate"><span class="pre">grow</span></code> and <code class="docutils literal notranslate"><span class="pre">no-shrink</span></code> micro-attributes,
+as well as <code class="docutils literal notranslate"><span class="pre">self-top</span></code>, <code class="docutils literal notranslate"><span class="pre">self-middle</span></code>, <code class="docutils literal notranslate"><span class="pre">self-bottom</span></code>, <code class="docutils literal notranslate"><span class="pre">self-left</span></code>, <code class="docutils literal notranslate"><span class="pre">self-center</span></code>, <code class="docutils literal notranslate"><span class="pre">self-righ</span></code>, <code class="docutils literal notranslate"><span class="pre">self-stretch</span></code>, and <code class="docutils literal notranslate"><span class="pre">self-baseline</span></code> micro-attributes.</p>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">human CSS</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting-started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="motivation.html">Motivation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="colors.html">Colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="units.html">Units and measures</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Flexbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="extending.html">Other topics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="design-notes.html">Design notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference.html">Reference</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="units.html" title="previous chapter">Units and measures</a></li>
+      <li>Next: <a href="modules.html" title="next chapter">Modules</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, Bob Myers.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.11</a>
+      
+      |
+      <a href="../_sources/pages/flexbox.md.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
