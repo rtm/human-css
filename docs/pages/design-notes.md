@@ -6,8 +6,8 @@ Performance
 
 CSS is rarely the major bottleneck in application performance.
 Of course there may be exceptions involving huge systems,
-or poorly written CSS rules,
-or use of CSS propeirtes with known performance implications.
+or extremely poorly written CSS rules,
+or use of CSS properties with known performance implications.
 
 Human CSS classes offer improved performance because the dozens or hundreds of CSS files often seen in
 poorly-engineered applications are much smaller (or not needed at all).

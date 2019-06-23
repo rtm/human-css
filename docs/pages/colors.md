@@ -2,37 +2,40 @@ Colors
 ======
 
 Human CSS allows you to easily think of colors in terms of their hue, lightness, and saturation,
-using micro-attributes for hues (`red`), as well as saturations such as ``bright` and ligthnesses such as `dark`.
-
-The color system exposes a single custom property on designated elements named `--color` which you may use as you see fit.
+using micro-attribute values for hues (`red`), as well as saturations such as ``bright` and ligthnesses such as `dark`.
+This is the so-called ["HSL" model](https://en.wikipedia.org/wiki/HSL_and_HSV).
+It makes it easy to implement coordinated color schemes.
 
 ```html
-<span dark red color>
+<span text="dark red color">
 ```
 
-Colors are specified using the flexible HSL model.
-This allows you to easily think of colors in terms of their hue, lightness, and saturation.
+The HSL model in terms of which colors are specified
+allows you to easily think of colors in terms of their hue, lightness, and saturation.
 The standard hues are red, orange, yellow, lime, green, aquamarine, cyan, azure, blue, purple, magenta, and pink.
-The hues can then be adjusted with additional micro-classes for saturation,
-including `pure`, `x-bright`, `bright`, `dull`, `x-dull`, and `gray`,
+The hues can then be combined with additional micro-class values for saturation,
+including `xx-bright`, `x-bright`, `bright`, `dull`, `x-dull`, and `xx-dull`,
 and with additional micro-attributes for lightness,
-including `white`, `x-light`, `light`, `dark`, `x-dark`, and `black`.
+including `xx-light` (white, essentially), `x-light`, `light`, `dark`, `x-dark`, and `xx-dark` (black, essentially).
 
-In addition, any HTML color, such as `steelblue`, can be used as an attribute to specify the desired color.
-To distinguish HTML colors from hues of the same name, add the attribute `html`, as in `html red`.
+There is a special attribute `color` which has no immediate effect.
+Instead, it sets global color values.
+For example, `color="red"` sets the global hue to red.
 
-The actual application of a color to a specific element is triggered by the presence of the `color` attribute.
-Without that, you are merely setting the hue, saturation, lightness, or alpha value for child elements.
-For example, the following will yield a red bordered div, with lighter red text:
+To actually apply this color to text, for example,
+use the `color` keyword in conjunction with the `text` attribute.
+For example, the following will yield a thick red bordered div, with lighter red text:
 
 ```
-<div hue red>
-  <div thick border color>
-    <div lighter text color>
+<div color='red">
+  <div border="thick darker color">
+    <div text="lighter color">
 ```
 
-For better or for worse, this means that to set a blue border requires saying `blue color border`.
-
-The global HSL values may be modified for a particular element by the attributes
-`purer` or `brighter`, `duller` or `grayer`, `whiter` or `lighter`, and `darker` or `blacker`,
+The color components may also be modified in relatively terms using
+`brighter`, `duller`, `lighter`, or `darker`,
 or corresponding versions prefixed with `x-`.
+In the case of border, for example, you might say `border="lighter blue color"`.
+
+Human CSS does not directly support HTML colors.
+To use HTML colors, apply them yourself via normal CSS mechanisms.

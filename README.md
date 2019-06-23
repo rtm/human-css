@@ -7,25 +7,28 @@ The great majority of common styling needs can be met by composing these micro-a
 
 Human CSS is based on the micro-class philosophy,
 in which elements are styled within HTML by specifying one or more micro-classes.
-However, instead of classes, we use attributes,
+However, instead of classes, we use attributes--
+one attribute for each bundle of properties, such as `text`, or `border`--
 for greater brevity and readability.
 Hence the term "micro-attributes".
+Each attribute may stand by itself, if that's all that needed,
+or be given a value of space-delimited options.
 
 With human CSS, many pages may need no specific CSS rules whatsoever.
 
 For instance, consider:
 
 ```
-<span large dark red bold text>
-<div thin light green top border>
-<div one third width>
+<span text="large  dark red color  bold">
+<div border="thin light green top">
+<div width="one third">
 ```
 
 Human CSS provides an easy interface to using flexbox,
 removing the need for the baroque grid systems some frameworks and libraries try to provide.
 For instance, the classic `float: right` is just
 
-    <div flex justify>
+    <div flex="justify">
       <div>I'm on the left</div>
       <div>I'm on the right</div>
     </div>

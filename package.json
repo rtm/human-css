@@ -3,10 +3,17 @@
   "version": "0.1.0",
   "description": "Human-friendly CSS attributes",
   "main": "index.css",
+  "scripts": {
+    "build": "postcss -o index.css src/index.css --map --use postcss-each"
+  },
   "repository": "github:rtm/human-css",
   "keywords": [
     "css"
   ],
   "author": "rtm@gol.com",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "postcss": "^7.0.4",
+    "postcss-each": "^0.10.0"
+  }
 }

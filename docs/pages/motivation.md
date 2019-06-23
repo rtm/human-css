@@ -1,7 +1,7 @@
 Motivation
 =====
 
-Our current CSS systems are a steaming pile of crap.
+Our current CSS systems are a steaming mess.
 We have thousands of lines of CSS.
 Half of these lines of CSS are not even used,
 because no one can remember what they do and are afraid to touch them.
@@ -11,9 +11,8 @@ Because CSS systems are most often created by "UI designers", rather than engine
 basic computing principles of orthogonality, factoring, and composition are ignored.
 
 We have become addicted to CSS preprocessors which
-merely provide some basic syntactic sugar, and, more perniciously,
-promote bad design practices.
-Huge sets of rules with complex selectors bog down the browser.
+provide largely unnecessary syntactic sugar, add complexity,
+and, more perniciously, promote bad design practices.
 
 Each new page we write requires dozens or hundreds of new lines of CSS.
 Any UI change requires parallel changes to both HTML and CSS.
