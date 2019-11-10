@@ -5,247 +5,139 @@
   --global-alpha:        1.0;
 }
 
+/**
+ * For the four attributes which take color-related values,
+ * as well as `color` itself,
+ * take the HSL-related values.
+ */
 [background~=primary]    { --background-hue: var(--hue-primary);    }
-
 [background~=accent]     { --background-hue: var(--hue-accent);  }
-
 [background~=success]    { --background-hue: var(--hue-success);    }
-
 [background~=warn]       { --background-hue: var(--hue-warn);       }
-
 [background~=error]      { --background-hue: var(--hue-error);      }
-
 [background~=red]        { --background-hue: orange;   }
-
 [background~=0]        { --background-hue: 30;   }
-
 [background~=xx-bright]  { --background-saturation: 100%; }
-
 [background~=x-bright]   { --background-saturation: 80%;  }
-
 [background~=bright]     { --background-saturation: 60%;  }
-
 [background~=medium-bright] { --background-saturation: 50%; }
-
 [background~=dull]       { --background-saturation: 40%;  }
-
 [background~=x-dull]     { --background-saturation: 20%;  }
-
 [background~=xx-dull]    { --background-saturation: 0%;   }
-
 /* completely gray */
-
 [background~=xx-light]   { --background-lightness: 100%; }
-
 [background~=x-light]    { --background-lightness: 80%;  }
-
 [background~=light]      { --background-lightness: 60%;  }
-
 [background~=medium-light] { --background-lightness: 50%; }
-
 [background~=dark]       { --background-lightness: 40%;  }
-
 [background~=x-dark]     { --background-lightness: 20%;  }
-
 [background~=xx-dark]    { --background-lightness: 0%;   }
-
 /* completely black */
-
 [background~=opaque]        { --background-alpha: 1.0; }
-
 [background~=translucent]   { --background-alpha: 0.8; }
-
 [background~=x-translucent] { --background-alpha: 0.6; }
-
 [background~=transparent]   { --background-alpha: 0;   }
-
 [border~=primary]    { --border-hue: var(--hue-primary);    }
-
 [border~=accent]     { --border-hue: var(--hue-accent);  }
-
 [border~=success]    { --border-hue: var(--hue-success);    }
-
 [border~=warn]       { --border-hue: var(--hue-warn);       }
-
 [border~=error]      { --border-hue: var(--hue-error);      }
-
 [border~=red]        { --border-hue: orange;   }
-
 [border~=0]        { --border-hue: 30;   }
-
 [border~=xx-bright]  { --border-saturation: 100%; }
-
 [border~=x-bright]   { --border-saturation: 80%;  }
-
 [border~=bright]     { --border-saturation: 60%;  }
-
 [border~=medium-bright] { --border-saturation: 50%; }
-
 [border~=dull]       { --border-saturation: 40%;  }
-
 [border~=x-dull]     { --border-saturation: 20%;  }
-
 [border~=xx-dull]    { --border-saturation: 0%;   }
-
 /* completely gray */
-
 [border~=xx-light]   { --border-lightness: 100%; }
-
 [border~=x-light]    { --border-lightness: 80%;  }
-
 [border~=light]      { --border-lightness: 60%;  }
-
 [border~=medium-light] { --border-lightness: 50%; }
-
 [border~=dark]       { --border-lightness: 40%;  }
-
 [border~=x-dark]     { --border-lightness: 20%;  }
-
 [border~=xx-dark]    { --border-lightness: 0%;   }
-
 /* completely black */
-
 [border~=opaque]        { --border-alpha: 1.0; }
-
 [border~=translucent]   { --border-alpha: 0.8; }
-
 [border~=x-translucent] { --border-alpha: 0.6; }
-
 [border~=transparent]   { --border-alpha: 0;   }
-
 [color~=primary]    { --color-hue: var(--hue-primary);    }
-
 [color~=accent]     { --color-hue: var(--hue-accent);  }
-
 [color~=success]    { --color-hue: var(--hue-success);    }
-
 [color~=warn]       { --color-hue: var(--hue-warn);       }
-
 [color~=error]      { --color-hue: var(--hue-error);      }
-
 [color~=red]        { --color-hue: orange;   }
-
 [color~=0]        { --color-hue: 30;   }
-
 [color~=xx-bright]  { --color-saturation: 100%; }
-
 [color~=x-bright]   { --color-saturation: 80%;  }
-
 [color~=bright]     { --color-saturation: 60%;  }
-
 [color~=medium-bright] { --color-saturation: 50%; }
-
 [color~=dull]       { --color-saturation: 40%;  }
-
 [color~=x-dull]     { --color-saturation: 20%;  }
-
 [color~=xx-dull]    { --color-saturation: 0%;   }
-
 /* completely gray */
-
 [color~=xx-light]   { --color-lightness: 100%; }
-
 [color~=x-light]    { --color-lightness: 80%;  }
-
 [color~=light]      { --color-lightness: 60%;  }
-
 [color~=medium-light] { --color-lightness: 50%; }
-
 [color~=dark]       { --color-lightness: 40%;  }
-
 [color~=x-dark]     { --color-lightness: 20%;  }
-
 [color~=xx-dark]    { --color-lightness: 0%;   }
-
 /* completely black */
-
 [color~=opaque]        { --color-alpha: 1.0; }
-
 [color~=translucent]   { --color-alpha: 0.8; }
-
 [color~=x-translucent] { --color-alpha: 0.6; }
-
 [color~=transparent]   { --color-alpha: 0;   }
-
 [text~=primary]    { --text-hue: var(--hue-primary);    }
-
 [text~=accent]     { --text-hue: var(--hue-accent);  }
-
 [text~=success]    { --text-hue: var(--hue-success);    }
-
 [text~=warn]       { --text-hue: var(--hue-warn);       }
-
 [text~=error]      { --text-hue: var(--hue-error);      }
-
 [text~=red]        { --text-hue: orange;   }
-
 [text~=0]        { --text-hue: 30;   }
-
 [text~=xx-bright]  { --text-saturation: 100%; }
-
 [text~=x-bright]   { --text-saturation: 80%;  }
-
 [text~=bright]     { --text-saturation: 60%;  }
-
 [text~=medium-bright] { --text-saturation: 50%; }
-
 [text~=dull]       { --text-saturation: 40%;  }
-
 [text~=x-dull]     { --text-saturation: 20%;  }
-
 [text~=xx-dull]    { --text-saturation: 0%;   }
-
 /* completely gray */
-
 [text~=xx-light]   { --text-lightness: 100%; }
-
 [text~=x-light]    { --text-lightness: 80%;  }
-
 [text~=light]      { --text-lightness: 60%;  }
-
 [text~=medium-light] { --text-lightness: 50%; }
-
 [text~=dark]       { --text-lightness: 40%;  }
-
 [text~=x-dark]     { --text-lightness: 20%;  }
-
 [text~=xx-dark]    { --text-lightness: 0%;   }
-
 /* completely black */
-
 [text~=opaque]        { --text-alpha: 1.0; }
-
 [text~=translucent]   { --text-alpha: 0.8; }
-
 [text~=x-translucent] { --text-alpha: 0.6; }
-
 [text~=transparent]   { --text-alpha: 0;   }
 
+/**
+ * The four attributew chih take color-related values also support relative values of HSL.
+ * This does not apply to `color`, since at present CSS custom properties provide no way to access parent value.
+ */
 [module] {
     --module-hue: var(--global-hue);
     --module-saturation: var(--global-saturation);
     --module-lightness: var(--global-lightness);
     --module-alpha: var(--global-alpha);
   }
-
 [module~=brighter]   { --module-saturation: calc(var(--global-saturation) + 10%); }
-
 [module~=duller]     { --module-saturation: calc(var(--global-saturation) - 10%); }
-
 [module~=x-brighter] { --module-saturation: calc(var(--global-saturation) + 20%); }
-
 [module~=x-duller]   { --module-saturation: calc(var(--global-saturation) - 20%); }
-
 [module~=lighter]    { --module-lightness: calc(var(--global-lightness) + 10%); }
-
 [module~=x-lighter]  { --module-lightness: calc(var(--global-lightness) + 20%); }
-
 [module~=darker]     { --module-lightness: calc(var(--global-lightness) - 10%); }
-
 [module~=x-darker]   { --module-lightness: calc(var(--global-lightness) - 20%); }
-
 [module~=more-opaque]    { --module-alpha: calc(var(--global-alpha) + 0.1); }
-
 [module~=less-opaque]    { --module-alpha: calc(var(--global-alpha) - 0.1); }
 
 /* BACKGROUND */
@@ -264,30 +156,26 @@ hipbackground~=color]      { background-color: hsla(var(--background-hue), var(-
 
 /* .widths */
 :root {
-  --border-width-global:      medium;
-  --border-style-global:      none;
+  --border-width-default:      medium;
+  --border-style-default:      solid;
 }
 
 [border] {
-  --border-width:      var(--border-width-global);
-  --border-style:      var(--border-style-global);
+  --border-width:      var(--border-width-default);
+  --border-style:      var(--border-style-default);
   --border-hue:        var(--global-hue);
   --border-saturation: var(--global-saturation);
   --border-lightness:  var(--global-lightness);
   --border-alpha:      var(--global-alpha);
+
+  border-color: hsla(var(--border-hue, --global-hue), var(--border-saturation), var(--border-lightness), var(--border-alpha));
+  border-width: var(--border-width);
 }
 
 /* border width */
-[border]             { --border-width: medium; }
 [border~=medium]     { --border-width: medium; }
 [border~=thin]     { --border-width: thin; }
 [border~=thick]     { --border-width: thick; }
-
-[border~=hair]       { --border-width: var(--hair); }
-[border~=em]         { --border-width: var(--em); }
-
-/* border style */
-[border]            { --border-style: solid;  }
 
 [border~=solid]     { --border-style: solid; }
 
@@ -309,16 +197,12 @@ hipbackground~=color]      { background-color: hsla(var(--background-hue), var(-
 [border~=rounded]   { border-radius: 0.5em; }
 [border~=x-rounded] { border-radius: 1.0em; }
 
+/* border sides */
 [border~=left]      { border-left-style:   var(--border-style); }
 [border~=right]     { border-right-style:  var(--border-style); }
 [border~=top]       { border-top-style:    var(--border-style); }
 [border~=bottom]    { border-bottom-style: var(--border-style); }
-[border]:not([border~=top]):not([borddr~=bottom]):not([border~=left]):not([border~=right]) { border-style: var(--border-style); }
-
-[border]            {
-  border-color: hsla(var(--border-hue), var(--border-saturation), var(--border-lightness), var(--border-alpha));
-  border-width: var(--border-width);
-}
+[border]:not([border~=top]):not([border~=bottom]):not([border~=left]):not([border~=right]) { border-style: var(--border-style); }
 
 /* BOX SHADOW
 
@@ -336,21 +220,24 @@ Supporting only identical x and y and no blur or spread radius.
   --inset: inset;
 }
 
-/* Do no color calculation unless the `color` attribute is present. */
-[color] {
-  --hue: var(--global-hue);
-  --saturation: var(--global-saturation);
-  --lightness: var(--global-lightness);
-  --alpha: var(--global-alpha);
+/**
+ * The `color` attribute is used for setting global color components.
+ **/
 
-  --color: hsla(var(--hue, 0), var(--saturation, 50%), var(--lightness, 50%), var(--alpha, 1.0));
+[color] {
+  --hue:        var(--global-hue);
+  --saturation: var(--global-saturation);
+  --lightness:  var(--global-lightness);
+  --alpha:      var(--global-alpha);
+
+  --color:      hsla(var(--hue, 0), var(--saturation, 50%), var(--lightness, 50%), var(--alpha, 1.0));
 }
 
-[text]             {
-  --text-hue: var(--global-hue);
+[text] {
+  --text-hue:        var(--global-hue);
   --text-saturation: var(--global-saturation);
-  --text-lightness: var(--global-lightness);
-  --text-alpha: var(--global-alpha);
+  --text-lightness:  var(--global-lightness);
+  --text-alpha:      var(--global-alpha);
 }
 
 [text~=color]      { color: hsla(var(--text-hue), var(--text-saturation), var(--text-lightness), var(--text-alpha)); }
@@ -1129,7 +1016,7 @@ q::after  { content: close-quote; }
 
 /* SIZE */
 [font~=xx-small]     { --length: xx-small; }
-[font~=x=small]      { --length: x-small;  }
+[font~=x-small]      { --length: x-small;  }
 [font~=small]        { --length: small;    }
 [font~=medium]       { --length: medium;   }
 [font~=large]        { --length: large;    }
