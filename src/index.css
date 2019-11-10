@@ -881,7 +881,7 @@ q::after  { content: close-quote; }
 
 /* SIZE */
 [font~=xx-small]     { --length: xx-small; }
-[font~=x=small]      { --length: x-small;  }
+[font~=x-small]      { --length: x-small;  }
 [font~=small]        { --length: small;    }
 [font~=medium]       { --length: medium;   }
 [font~=large]        { --length: large;    }
