@@ -40,9 +40,8 @@ The following CSS features require more complex properties which are not well-su
 and therefore are not (currently) supported:
 
 1. Animations or more complex transitions
-2. Box shadows and text shadows
-3. Properties involving URLs, such as `background-image`
-4. Pseudo-classes
-5. Pseudo-elements
+2. Text shadows
+3. Pseudo-classes
+4. Pseudo-elements
 
-Some of thse might be able to be supported when browser support for the `attr()` function is available.
+Some of these might be able to be supported when browser support for the `attr()` function is available.

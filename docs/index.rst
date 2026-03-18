@@ -16,6 +16,7 @@ Welcome to Human CSS!
    pages/colors.md
    pages/units.md
    pages/flexbox.md
+   pages/grid.md
    pages/modules.md
    pages/extending.md
    pages/design-notes.md

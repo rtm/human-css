@@ -12,7 +12,7 @@ so we can write
 <div three columns>
 ```
 
-THe special keyword `size` indicates a ratio to a current size of 100%.
+The special keyword `size` indicates a ratio to a current size of 100%.
 For instance, the following might specify a `flex-basis` of one-third the screen width:
 
 ```html

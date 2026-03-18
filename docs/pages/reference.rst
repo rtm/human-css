@@ -3,11 +3,18 @@ Reference
 
 This reference gives all possible micro-attribute values and what micro-attribute they are used with.
 
-==================== ================ ============ =============================
+==================== ================ ============ ===============================================
 Name                 Used with        Modifiers    Description
-==================== ================ ============ =============================
+==================== ================ ============ ===============================================
 absolute             box                           Absolute positioning
 alpha                list             lower, upper Alpha list markers
+aspect-ratio                          square etc.  Set element aspect ratio
+auto-fill            grid                          Responsive grid with auto-fill
+auto-fit             grid                          Responsive grid with auto-fit
+balance              text                          Balanced text wrapping
+block                margin, padding               Logical block margin or padding
+block-end            margin, padding               Logical block-end margin or padding
+block-start          margin, padding               Logical block-start margin or padding
 backmost                                           Set element to very back
 baseline             box                           Align element verticaly to baseline
 baseline             self                          Align flex child to baseline
@@ -25,11 +32,14 @@ center               snap                          Snap scrolling to center of e
 center               text                          Align text to center
 center               self                          Align flex child to center
 circle               list                          Circle list marker
+column               gap                           Column gap only
+columns              grid                          Auto-flow by column
 column(s)            columns                       Number of columns
 contain              background                    Clip background image
 cover                background                    Letterbox background image
 dashed               border                        Dashed border
 decimal              list                          Decimal list markers
+dense                grid                          Dense grid auto-placement
 delay                transition                    Delay transition
 delay-less           transition                    Shorter delay transition
 delay-more           transition                    Longer delay transition
@@ -46,9 +56,11 @@ x-bold               text                          Font weight 800
 x-light              text                          Extra-light font
 fast                 transition                    Fast transition
 first                self                          Place item first in flex order
-fixed                box                           Fixed positioniong
+fixed                box                           Fixed positioning
 front                z-index                       Set element in front
 frontmost            z-index                       Set element to very front
+gap                                   thin etc.    Gap between flex or grid items
+grid                                               Set up grid container
 groove               border                        Groove-style border
 grow                 self                          Allow this item to grow
 hair                 padding, margin               Padding or margin of 1/6 em
@@ -56,7 +68,13 @@ hairline             font-weight                   Lightest font
 heavy                font-weight                   Heaviest font
 hidden               display                       Hide element
 hidden               scroll                        Set hidden overflow behavior
+image                background                    Background image via --image variable
 indent               text                          Indent text
+inline               margin, padding               Logical inline margin or padding
+inline-end           margin, padding               Logical inline-end margin or padding
+inline-size                                        Set inline size (logical width)
+inline-start         margin, padding               Logical inline-start margin or padding
+inset                                              Set position inset
 indent-more          text                          Indent text more
 inline               box                           Inline-block display
 inline               flex                          Set up inline flex container
@@ -90,7 +108,7 @@ loose                spacing          x-           Looser inter-element spacing
 loose                text spacing     x-           Expand space between letters
 lower                list                          Lower-cased list markers
 lower                text-transform                Lower-cased text
-mandatory            scroll snap                   Alwasy snap scrolling
+mandatory            scroll snap                   Always snap scrolling
 medium               border                        Medium border width
 medium               text                          Medium font size
 middle               flex                          Align flex children to middle
@@ -105,18 +123,24 @@ normal               text spacing                  Normal character spacing
 normal               text                          Normal font weight
 nowrap               whitespace                    Do not wrap lines
 opaque               opacity                       Full opacity
+nowrap               text                          Prevent text wrapping
 outset               border                        Outset-style border
 outside              list                          Outside list markers
 over                 ruby                          Ruby on top
 overflow             overflow                      Set overflow behavior
 padding              padding                       Pad an element
+photo                aspect-ratio                  4:3 aspect ratio
 pointer              cursor                        Pointing cursor
+portrait             aspect-ratio                  3:4 aspect ratio
+pretty               text                          Pretty text wrapping
 print-only                                         Show only on print media
 proximity            scroll snap                   Snap scrolling if nearby
-relative                                           Relative positioniong
+relative                                           Relative positioning
 repeat-x             background                    Repeat background in x direction
 repeat-y             background                    Repeat background in y direction
 resize               resize           x/y          Allow resizing of element
+row                  gap                           Row gap only
+rows                 grid                          Auto-flow by row
 reverse              flex                          Reverse flex order
 ridge                border                        Ridge-style border
 right                flex                          Align flex items to right
@@ -139,11 +163,17 @@ smaller              size                          Smaller font size
 snap                                  start etc.   Set scroll snap alignment
 solid                border                        Solid border
 spaces                                             Do not collapse whitespace
+span                                  two etc.     Span grid columns
+span-row                              two etc.     Span grid rows
+square               aspect-ratio                  1:1 aspect ratio
 square               list marker                   Square list marker
+stable               text                          Stable text wrapping
+subgrid              grid                          Use parent grid tracks
+subgrid-rows         grid                          Use parent grid row tracks
 start                ruby                          Align ruby to start
 start                snap                          Snap scrolling to start of element
 step                 transition       start/end    Transition timing "step-start"
-stretch              self                          Strectch flex child
+stretch              self                          Stretch flex child
 strong               text                          Bold text
 thick                border                        Thick border
 thin                 border                        Thin border
@@ -160,10 +190,12 @@ ultra-bold           font-weight                   Bolder than bold
 ultra-light          font-weight                   Extra-light font
 under                ruby                          Ruby on bottom
 underline            font-decoration               Underline text
-upper                list marker roman etc.        Uppercased list marker
+upper                list             roman etc.   Uppercased list marker
 upper                text-transform                Uppercased text
+video                aspect-ratio                  16:9 aspect ratio
 visible              visibility                    Make visible
 weight               text                          Set font weight
+wide                 aspect-ratio                  21:9 aspect ratio
 wrap                 flex                          Wrap flexbox items
 x                    flex                          Row-oriented flex container
 x                    resize                        Allow horizontal resizing
@@ -182,4 +214,4 @@ y                    flex                          Column-oriented flex containe
 y                    resize                        Allow vertical resizing
 y                    scroll                        Set vertical overflow
 y                    scroll-snap                   Snap scrolling in y-direction
-==================== ================ ============ =============================
+==================== ================ ============ ===============================================

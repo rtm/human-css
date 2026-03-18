@@ -1,28 +1,27 @@
+<!DOCTYPE html>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en" data-content_root="../">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Other topics &#8212; human CSS 0.1.0 documentation</title>
-    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Extending Human CSS &#8212; Human CSS 0.1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css?v=686e5160" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css?v=27fed22d" />
+    <script src="../_static/documentation_options.js?v=01f34227"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Design notes" href="design-notes.html" />
-    <link rel="prev" title="Modules" href="modules.html" />
+    <link rel="prev" title="Attributes" href="modules.html" />
    
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
   
+
   
-  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+  
 
   </head><body>
   
@@ -34,59 +33,75 @@
 
           <div class="body" role="main">
             
-  <div class="section" id="other-topics">
-<span id="other-topics"></span><h1>Other topics<a class="headerlink" href="#other-topics" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="combining-micro-attributes">
-<span id="combining-micro-attributes"></span><h2>Combining micro-attributes<a class="headerlink" href="#combining-micro-attributes" title="Permalink to this headline">¶</a></h2>
-<p>Human CSS uses a relatively limited number of general-purpose micro-attributes.
-So <code class="docutils literal notranslate"><span class="pre">green</span></code> means green for text, or borders, or backgrounds.
-But what if I want to specify both text color <strong>and</strong> border color on an element?
-How do I know which color is which?
-Other micro-class frameworks solve this by a proliferation of classes such as <code class="docutils literal notranslate"><span class="pre">green-border</span></code>, and <code class="docutils literal notranslate"><span class="pre">green-text</span></code>.
-We take a different approach, which is to place the attributes on individual, nested HTML elements:</p>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">one</span> <span class="na">em</span> <span class="na">margin</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">thick</span> <span class="na">dark</span> <span class="na">blue</span> <span class="na">border</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">x-light</span> <span class="na">pink</span> <span class="na">background</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">five</span> <span class="na">percent</span> <span class="na">padding</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">large</span> <span class="na">bold</span> <span class="na">white</span> <span class="na">text</span><span class="p">&gt;</span>
-          Bob
-        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</pre></div>
-</div>
-<p>Although this does result in more deeply nested HTML,
-it also has major advantages.
-Each element has a single, well-defined purpose,
-and as mentioned above we need only generic attributes such as <code class="docutils literal notranslate"><span class="pre">blue</span></code> which work everywhere.</p>
-</div>
-<div class="section" id="defining-your-own-attributes">
-<span id="defining-your-own-attributes"></span><h2>Defining your own attributes<a class="headerlink" href="#defining-your-own-attributes" title="Permalink to this headline">¶</a></h2>
+  <section id="extending-human-css">
+<h1>Extending Human CSS<a class="headerlink" href="#extending-human-css" title="Link to this heading">¶</a></h1>
+<section id="defining-your-own-attributes">
+<h2>Defining your own attributes<a class="headerlink" href="#defining-your-own-attributes" title="Link to this heading">¶</a></h2>
 <p>What if I want to <strong>include</strong> the <code class="docutils literal notranslate"><span class="pre">padding</span></code> functionality into my own attribute definition?
 We would caution against this approach,
-which goes against the grain of the micro-class/micro-attribute  philosophy.
-However, it does have the “advantage” of allowing me to simply say <code class="docutils literal notranslate"><span class="pre">&lt;div</span> <span class="pre">class=&quot;my-class&quot;&gt;</span></code>.
+which goes against the grain of the micro-attribute philosophy.
+However, it does have the “advantage” of allowing me to simply say <code class="docutils literal notranslate"><span class="pre">&lt;div</span> <span class="pre">my-padded-red-border&gt;</span></code>,
+if that is your cup of tea.
 You can do this using the <code class="docutils literal notranslate"><span class="pre">postcss-inherit</span></code> plug-in, which provides an <code class="docutils literal notranslate"><span class="pre">&#64;inherit</span></code> pseudo-property, as follows:</p>
-<div class="highlight-css notranslate"><div class="highlight"><pre><span></span>[my-padded-red] {
-  @inherit [red], [thick][padding];
-}
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="o">[</span><span class="nt">my-padded-red-border</span><span class="o">]</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="err">@inherit</span><span class="w"> </span><span class="err">[border~=red][border~=color],</span><span class="w"> </span><span class="err">[padding~=thick]</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Note that each micro-attribute value must be a separate <code class="docutils literal notranslate"><span class="pre">~=</span></code> selector.
+For example, <code class="docutils literal notranslate"><span class="pre">[border~=red][border~=color]</span></code> is correct;
+<code class="docutils literal notranslate"><span class="pre">[border~=&quot;red</span> <span class="pre">color&quot;]</span></code> would <strong>not</strong> work,
+because <code class="docutils literal notranslate"><span class="pre">~=</span></code> matches a single word, not a phrase.</p>
+<p>You can also create your own attributes with scoped values.
+For instance, you could define a <code class="docutils literal notranslate"><span class="pre">custom-border</span></code> attribute
+with values like <code class="docutils literal notranslate"><span class="pre">padded-red</span></code>:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="o">[</span><span class="nt">custom-border</span><span class="o">~=</span><span class="nt">padded-red</span><span class="o">]</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="err">@inherit</span><span class="w"> </span><span class="err">[border~=red][border~=color],</span><span class="w"> </span><span class="err">[padding~=thick]</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="o">[</span><span class="nt">custom-border</span><span class="o">~=</span><span class="nt">thin-blue</span><span class="o">]</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="err">@inherit</span><span class="w"> </span><span class="err">[border~=thin][border~=blue][border~=color]</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>This allows usage like:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">span</span> <span class="na">custom-border</span><span class="o">=</span><span class="s">&quot;padded-red&quot;</span><span class="p">&gt;</span>Styled text<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">custom-border</span><span class="o">=</span><span class="s">&quot;thin-blue&quot;</span><span class="p">&gt;</span>Another element<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </pre></div>
 </div>
 <p>If you really want to go this route, you’ll have to make sure to add <code class="docutils literal notranslate"><span class="pre">postcss-inherit</span></code> to your package,
-and arrange for it to be added to the list of plug-ins used in the preprocessing step,</p>
+and arrange for it to be added to the list of plug-ins used in the preprocessing step.</p>
+</section>
+<section id="javascript">
+<h2>JavaScript<a class="headerlink" href="#javascript" title="Link to this heading">¶</a></h2>
+<p>Since human CSS uses attributes,
+to control it from JavaScript you will have to add, modify, or remove attributes,
+using <code class="docutils literal notranslate"><span class="pre">Element#setAttribute</span></code> and <code class="docutils literal notranslate"><span class="pre">Element#removeAttribute</span></code>.
+You may also use the <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/API/Element/toggleAttribute"><code class="docutils literal notranslate"><span class="pre">toggleAttribute</span></code> API</a>.</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">// Add styling</span>
+<span class="nx">el</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s1">&#39;border&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;thick red color&#39;</span><span class="p">);</span>
+
+<span class="c1">// Change a value</span>
+<span class="nx">el</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s1">&#39;text&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;bold large&#39;</span><span class="p">);</span>
+
+<span class="c1">// Remove styling</span>
+<span class="nx">el</span><span class="p">.</span><span class="nx">removeAttribute</span><span class="p">(</span><span class="s1">&#39;border&#39;</span><span class="p">);</span>
+
+<span class="c1">// Toggle a standalone attribute</span>
+<span class="nx">el</span><span class="p">.</span><span class="nx">toggleAttribute</span><span class="p">(</span><span class="s1">&#39;visible&#39;</span><span class="p">);</span>
+</pre></div>
 </div>
-</div>
+</section>
+</section>
 
 
           </div>
           
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
         <div class="sphinxsidebarwrapper">
-<h1 class="logo"><a href="../index.html">human CSS</a></h1>
+<h1 class="logo"><a href="../index.html">Human CSS</a></h1>
 
 
 
@@ -95,8 +110,17 @@ and arrange for it to be added to the list of plug-ins used in the preprocessing
 
 
 
-<h3>Navigation</h3>
-<p class="caption"><span class="caption-text">Contents:</span></p>
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="getting-started.html">Getting started</a></li>
@@ -104,10 +128,11 @@ and arrange for it to be added to the list of plug-ins used in the preprocessing
 <li class="toctree-l1"><a class="reference internal" href="colors.html">Colors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="units.html">Units and measures</a></li>
 <li class="toctree-l1"><a class="reference internal" href="flexbox.html">Flexbox</a></li>
-<li class="toctree-l1"><a class="reference internal" href="modules.html">Modules</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Other topics</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#combining-micro-attributes">Combining micro-attributes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="grid.html">Grid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">Attributes</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Extending Human CSS</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#defining-your-own-attributes">Defining your own attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#javascript">JavaScript</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="design-notes.html">Design notes</a></li>
@@ -118,33 +143,29 @@ and arrange for it to be added to the list of plug-ins used in the preprocessing
 <h3>Related Topics</h3>
 <ul>
   <li><a href="../index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="modules.html" title="previous chapter">Modules</a></li>
+      <li>Previous: <a href="modules.html" title="previous chapter">Attributes</a></li>
       <li>Next: <a href="design-notes.html" title="next chapter">Design notes</a></li>
   </ul></li>
 </ul>
 </div>
-<div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
-    </form>
-    </div>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
         </div>
       </div>
       <div class="clearer"></div>
     </div>
     <div class="footer">
-      &copy;2018, Bob Myers.
+      &#169;2026, Bob Myers.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.1</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.11</a>
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.1.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
       
       |
       <a href="../_sources/pages/extending.md.txt"

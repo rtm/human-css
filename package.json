@@ -4,7 +4,8 @@
   "description": "Human-friendly CSS attributes",
   "main": "index.css",
   "scripts": {
-    "build": "postcss -o index.css src/index.css --map --use postcss-each"
+    "build": "postcss -o index.css src/index.css --map --use postcss-each",
+    "docs": "sphinx-build -b html docs docs/_build/html"
   },
   "repository": "github:rtm/human-css",
   "keywords": [
@@ -15,5 +16,8 @@
   "dependencies": {
     "postcss": "^7.0.4",
     "postcss-each": "^0.10.0"
+  },
+  "devDependencies": {
+    "postcss-cli": "^6.1.3"
   }
 }

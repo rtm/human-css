@@ -58,9 +58,6 @@ In the best case, which is readily realizable in practice, no element-specific c
 
 ### Caveats
 
-Human CSS uses CSS custom properties in its implementation.
-This excludes IE11 from consideration (but Edge is fine).
-
 This library is currently at v0.1.0.
-it has been used successfully in several projects, but is by no means completely shaken down.
+It has been used successfully in several projects, but is by no means completely shaken down.
 *Caveat emptor*.

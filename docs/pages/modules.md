@@ -27,10 +27,16 @@ Colors may also be specified for borders and padding.
 Background
 ----------
 
-The `background` micro-atteribute provides a background of the specified color.
+The `background` micro-attribute provides a background of the specified color.
 
 ```html
-<div background="x-light blue color"></d
+<div background="x-light blue color"></div>
+```
+
+Background images are also supported by setting a CSS variable:
+
+```html
+<div background="image cover" style="--image: url(photo.jpg)"></div>
 ```
 
 Sizes
@@ -54,7 +60,7 @@ including position (`absolute` etc.),
 display (`hidden`),
 vertical alignment,
 `visible` and `invisible`,
-box sizing ('border` or `content`), and so on.
+box sizing (`border` or `content`), and so on.
 
 Spacing
 -------
@@ -74,6 +80,80 @@ Example of spaced children:
 </div>
 ```
 
+
+Grid
+----
+
+The `grid` micro-attribute sets up a CSS grid container.
+Use English number words for equal columns, or `auto-fill`/`auto-fit` for responsive grids.
+
+```html
+<div grid="three gap">
+  <div>Column 1</div>
+  <div>Column 2</div>
+  <div>Column 3</div>
+</div>
+
+<div grid="auto-fit" style="--grid-min: 15rem">
+  <div>Responsive card</div>
+  <div>Responsive card</div>
+  <div>Responsive card</div>
+</div>
+
+<div grid="two">
+  <div span="two">Full-width header</div>
+  <div>Sidebar</div>
+  <div>Content</div>
+</div>
+```
+
+Alignment uses the same keywords as flex: `top`, `middle`, `bottom`, `left`, `center`, `right`, `stretch`.
+
+Gap
+---
+
+The `gap` micro-attribute adds spacing between flex or grid children.
+
+```html
+<div flex="wrap" gap="thick"></div>
+<div grid="three" gap="thin"></div>
+```
+
+Aspect ratio
+------------
+
+```html
+<img aspect-ratio="video">
+<div aspect-ratio="square"></div>
+<div aspect-ratio="photo"></div>
+```
+
+The predefined ratios are `square` (1:1), `video` (16:9), `photo` (4:3), `portrait` (3:4), and `wide` (21:9).
+
+Logical properties
+------------------
+
+Margins, padding, and inset support logical (writing-direction-aware) sides:
+`inline`, `block`, `inline-start`, `inline-end`, `block-start`, `block-end`.
+These work correctly for both LTR and RTL layouts.
+
+```html
+<div padding="thick inline"></div>
+<div margin="thin block-start"></div>
+<div inset="inline"></div>
+```
+
+Logical sizing is available with `inline-size`, `max-inline-size`, and `min-inline-size`.
+
+Text wrap
+---------
+
+Control how text wraps within elements:
+
+```html
+<h2 text="balance">Balanced heading avoids orphans</h2>
+<p text="pretty">Pretty wrapping for body text</p>
+```
 
 Opacity
 -------
@@ -104,10 +184,59 @@ Opacity
 
 ## Transitions
 
-THe `transition` micro-attribute provides a streamlined interface for simple transitions.
+The `transition` micro-attribute provides a streamlined interface for simple transitions.
 
 ```html
 <div transition="fast linear delay"></div>
+```
+
+## Overflow
+
+```html
+<div overflow="scroll x"></div>
+<div overflow="hidden"></div>
+```
+
+## Cursor
+
+```html
+<div cursor="pointer"></div>
+```
+
+## Lists
+
+```html
+<ul list="upper roman outside"></ul>
+<ol list="decimal inside"></ol>
+```
+
+## Ruby
+
+The `ruby` micro-attribute controls ruby annotation positioning and alignment,
+useful for CJK text and linguistic annotations.
+
+```html
+<ruby ruby="over center">
+  漢<rp>(</rp><rt>かん</rt><rp>)</rp>
+  字<rp>(</rp><rt>じ</rt><rp>)</rp>
+</ruby>
+```
+
+Position values: `over`, `under`, `left`, `right`, `before`, `after`, `inter-character`.
+Alignment values: `start`, `center`, `justify`, `justify-gap`.
+
+## Resize
+
+```html
+<textarea resize="vertical"></textarea>
+```
+
+## Scroll snap
+
+```html
+<div scroll-snap="x mandatory">
+  <div scroll-snap-align="center"></div>
+</div>
 ```
 
 ## White space
@@ -141,7 +270,7 @@ Do not wrap (other than at newlines, if they are being honored).
 This is the classical `white-space: pre` case.
 It is appropriate for code fragments.
 
-#### `whitespace='newlines`
+#### `whitespace="newlines"`
 
 This corresponds to `pre-line`, which is like `pre`, but spaces and tabs will be collapsed.
 This is suitable for the common case of displaying a user post.
