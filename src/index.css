@@ -10,7 +10,7 @@
  * as well as `color` itself,
  * take the HSL-related values.
  */
-@each $module in background, border, color, text {
+@each $module in background, border, box-shadow, color, text, text-shadow {
   [$(module)~=primary]    { --$(module)-hue: var(--hue-primary);    }
   [$(module)~=accent]     { --$(module)-hue: var(--hue-accent);  }
   [$(module)~=success]    { --$(module)-hue: var(--hue-success);    }
@@ -47,7 +47,7 @@
  * The four attributes which take color-related values also support relative values of HSL.
  * This does not apply to `color`, since at present CSS custom properties provide no way to access parent value.
  */
-@each $module in background, border, outline, text {
+@each $module in background, border, box-shadow, outline, text, text-shadow {
   [$(module)] {
     --$(module)-hue: var(--global-hue);
     --$(module)-saturation: var(--global-saturation);
@@ -133,7 +133,7 @@ Supporting only identical x and y and no blur or spread radius.
   --inset: ;
   --box-shadow-offset: var(--length);
 
-  box-shadow: var(--inset) var(--box-shadow-offset) var(--box-shadow-offset) var(--color);
+  box-shadow: var(--inset) var(--box-shadow-offset) var(--box-shadow-offset) hsla(var(--box-shadow-hue), var(--box-shadow-saturation), var(--box-shadow-lightness), var(--box-shadow-alpha));
 }
 
 [box-shadow~=inset] {
@@ -149,7 +149,7 @@ Supporting only identical x and y offset.
   --text-shadow-offset: var(--length, 1px);
   --text-shadow-blur: 0;
 
-  text-shadow: var(--text-shadow-offset) var(--text-shadow-offset) var(--text-shadow-blur) var(--color, currentColor);
+  text-shadow: var(--text-shadow-offset) var(--text-shadow-offset) var(--text-shadow-blur) hsla(var(--text-shadow-hue), var(--text-shadow-saturation), var(--text-shadow-lightness), var(--text-shadow-alpha));
 }
 
 [text-shadow~=blur]   { --text-shadow-blur: 2px; }

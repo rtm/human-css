@@ -36,6 +36,7 @@ The color components may also be modified in relatively terms using
 `brighter`, `duller`, `lighter`, or `darker`,
 or corresponding versions prefixed with `x-`.
 In the case of border, for example, you might say `border="lighter blue color"`.
+Shadows also support scoped colors: `text-shadow="red blur"` or `box-shadow="dark blue"`.
 
 Human CSS does not directly support HTML colors.
 To use HTML colors, apply them yourself via normal CSS mechanisms.

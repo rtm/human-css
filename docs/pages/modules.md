@@ -168,10 +168,12 @@ Opacity
 ## Shadows
 
 Box shadows and text shadows are supported with identical x and y offsets.
+Colors are scoped within each shadow attribute.
 
 ```html
-<div box-shadow color="blue"></div>
-<span text-shadow="blur" color="red">Shadowed text</span>
+<div box-shadow="blue" two px></div>
+<span text-shadow="red blur" one px>Shadowed text</span>
+<span text-shadow="dark green x-blur">Deep shadow</span>
 ```
 
 ## Z-index
