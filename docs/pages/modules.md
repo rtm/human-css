@@ -165,6 +165,15 @@ Opacity
 <div opacity 0.8></div>
 ```
 
+## Shadows
+
+Box shadows and text shadows are supported with identical x and y offsets.
+
+```html
+<div box-shadow color="blue"></div>
+<span text-shadow="blur" color="red">Shadowed text</span>
+```
+
 ## Z-index
 
 ```html

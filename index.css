@@ -271,6 +271,21 @@ Supporting only identical x and y and no blur or spread radius.
   --inset: inset;
 }
 
+/* TEXT SHADOW
+
+Supporting only identical x and y offset.
+*/
+
+[text-shadow] {
+  --text-shadow-offset: var(--length, 1px);
+  --text-shadow-blur: 0;
+
+  text-shadow: var(--text-shadow-offset) var(--text-shadow-offset) var(--text-shadow-blur) var(--color, currentColor);
+}
+
+[text-shadow~=blur]   { --text-shadow-blur: 2px; }
+[text-shadow~=x-blur] { --text-shadow-blur: 4px; }
+
 /**
  * The `color` attribute is used for setting global color components.
  **/
